@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PowerUp Database</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="text-center">PowerUp Adatbázis Kezelő</h2>
+        <p class="text-center text-muted">"Erő és kitartás minden mozdulatban!"</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="mt-4">Új bejegyzés</h4>
+                <form id="dataForm" class="border p-4 bg-light rounded">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Név</label>
+                        <input type="text" class="form-control" id="name" placeholder="Add meg a nevet..." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Add meg az email címet..." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rank" class="form-label">Rang</label>
+                        <input type="text" class="form-control" id="rank" placeholder="Add meg a rangot..." required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Mentés</button>
+                </form>
+            </div>
+            
+            <div class="col-md-6">
+                <h4 class="mt-4">Felhasználók listája</h4>
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Név</th>
+                            <th>Email</th>
+                            <th>Rang</th>
+                            <th>Műveletek</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTable">
+                        <!-- Dinamikusan betöltött sorok -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="client.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
